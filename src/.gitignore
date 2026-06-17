@@ -1,0 +1,21 @@
+# Thư mục biên dịch tạm và thư viện tự tải của PlatformIO (Bắt buộc ignore)
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# Cấu hình riêng của VS Code (Bắt buộc ignore)
+.vscode/
+.clang_complete
+.gcc-flags.json
+.tags
+
+# Các file tạm của hệ thống biên dịch (Nếu có)
+CMakeLists.txt
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+# File thực thi đầu ra
+*.bin
+*.elf
+*.hex

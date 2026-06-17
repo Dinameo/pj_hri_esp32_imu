@@ -63,22 +63,18 @@ void loop()
 	float ay_ms2 = ay * 9.81f * 1000.0f;
 	float az_ms2 = az * 9.81f * 1000.0f;
 
-	// Chặn nhiễu nhỏ
 	if (fabs(ax_ms2) < 500) ax_ms2 = 0;
 	if (fabs(ay_ms2) < 500) ay_ms2 = 0;
 	if (fabs(az_ms2) < 500) az_ms2 = 0;
 
-	// Cộng vận tốc
 	vx += ax_ms2 * dt;
 	vy += ay_ms2 * dt;
 	vz += az_ms2 * dt;
 
-	// Nếu không có gia tốc thì giảm vận tốc dần
 	if (ax_ms2 == 0) vx *= 0.8f;
 	if (ay_ms2 == 0) vy *= 0.8f;
 	if (az_ms2 == 0) vz *= 0.8f;
 
-	// Giới hạn vận tốc để khỏi bay
 	vx = constrain(vx, -300.0f, 300.0f);
 	vy = constrain(vy, -300.0f, 300.0f);
 	vz = constrain(vz, -300.0f, 300.0f);
@@ -90,9 +86,8 @@ void loop()
 
 	// Scale
 	dx /= 10.0f;
-	dy /= 0;
-	// dz /= 10.0f;
-	dz = 0;
+	dy = 0; // bỏ tạm
+	dz = 0; // bỏ tạm
 
 	String msg =
 		String(dx, 3) + "," +

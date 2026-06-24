@@ -44,13 +44,13 @@ unsigned long lastTime;
 // =====================
 
 // Yaw trái/phải -> X robot
-const float SCALE_X = 5.0f;   // mm / độ
+const float SCALE_X = 20.0f;   // mm / độ
 
 // Roll lên/xuống -> Z robot
-const float SCALE_Z = 5.0f;   // mm / độ
+const float SCALE_Z = 20.0f;   // mm / độ
 
 // Nếu sau này muốn dùng pitch cho Y robot thì tăng SCALE_Y
-const float SCALE_Y = 0.0f;
+const float SCALE_Y = 20.0f;
 
 // Đảo chiều nếu chạy ngược
 // Đảo chiều nếu chạy ngược
